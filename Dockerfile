@@ -6,7 +6,7 @@ WORKDIR /root
 
 COPY wkhtmltox_0.12.6-1.buster_amd64.deb /root/wkhtmltox_0.12.6-1.buster_amd64.deb
 
-COPY SimSun.ttf SimHei.ttf  /root/.fonts/
+COPY SimSun.ttf SimHei.ttf /root/.fonts/
 
 RUN apt-get update \
     && ( dpkg -i wkhtmltox_0.12.6-1.buster_amd64.deb || apt -f -y install ) \
